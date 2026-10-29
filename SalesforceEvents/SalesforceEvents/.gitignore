@@ -1,0 +1,4 @@
+bin/
+obj/
+*replay.txt
+.vs/

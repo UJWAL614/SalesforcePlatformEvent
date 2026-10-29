@@ -1,0 +1,3 @@
+appsettings.Local.json
+appsettings.*.local.json
+*replay.txt

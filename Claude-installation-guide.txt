@@ -1,0 +1,24 @@
+1. irm https://claude.ai/install.ps1 | iex                          
+add path into enviroment variablesclaud
+
+Step 1: Check your environment variable
+1. Press Win + R, type sysdm.cpl, and press Enter.
+2. Open Advanced → Environment Variables.
+3. Under System variables, select Path and click Edit.
+4. Add this entry as a new row:
+C:\Users\ujjwa\.local\bin
+
+check -Test-Path "$HOME\.local\bin\claude.exe"  true
+
+& "$HOME\.local\bin\claude.exe" --version  2.1.312 (Claude Code)
+
+$env:Path -split ';' | Select-String '\.local\\bin'
+
+[Environment]::GetEnvironmentVariable("Path", "User")
+
+if path not found :$env:Path = "$HOME\.local\bin;$env:Path"
+
+PS C:\Users\ujjwa\SalesforcePratice> $env:Path = "$HOME\.local\bin;$env:Path"
+PS C:\Users\ujjwa\SalesforcePratice> where.exe claude
+C:\Users\ujjwa\.local\bin\claude.exe
+PS C:\Users\ujjwa\SalesforcePratice> 
