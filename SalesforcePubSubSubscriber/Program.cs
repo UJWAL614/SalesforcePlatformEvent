@@ -1,7 +1,11 @@
 using SalesforcePubSubSubscriber;
 
 var builder = Host.CreateApplicationBuilder(args);
-builder.Services.AddHostedService<Worker>();
+var settings = builder.Configuration.GetSection("Salesforce").Get<SalesforceSettings>()
+               ?? new SalesforceSettings();
 
-var host = builder.Build();
-host.Run();
+builder.Services.AddSingleton(settings);
+builder.Services.AddSingleton<SalesforceAuth>();
+builder.Services.AddHostedService<PubSubWorker>();
+
+await builder.Build().RunAsync();

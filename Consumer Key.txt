@@ -1,0 +1,25 @@
+Consumer Key	
+3MVG9HtWXcDGV.nFEJFFrjTQVA2noJ7D38pR4QVRY6_sZjbxfv8KV9fsdMmEjzIOon3Is4G2zKAWk3l_pQhkY
+Consumer Secret	
+748B46F552C4A556AA61C52B0E5568CD07EF1AF926D0AD93980CA8573E8E31A0
+
+
+curl -X POST "https://orgfarm-ce97e42bbf-dev-ed.develop.lightning.force.com/services/oauth2/token" \
+  -d "grant_type=client_credentials" \
+  -d "client_id=3MVG9HtWXcDGV.nFEJFFrjTQVA2noJ7D38pR4QVRY6_sZjbxfv8KV9fsdMmEjzIOon3Is4G2zKAWk3l_pQhkY" \
+  -d "client_secret=748B46F552C4A556AA61C52B0E5568CD07EF1AF926D0AD93980CA8573E8E31A0"
+
+
+
+$body = @{
+    grant_type    = "client_credentials"
+    client_id     = "3MVG9HtWXcDGV.nFEJFFrjTQVA2noJ7D38pR4QVRY6_sZjbxfv8KV9fsdMmEjzIOon3Is4G2zKAWk3l_pQhkY"
+    client_secret = "748B46F552C4A556AA61C52B0E5568CD07EF1AF926D0AD93980CA8573E8E31A0"
+}
+
+Invoke-RestMethod `
+    -Method Post `
+    -Uri "https://orgfarm-ce97e42bbf-dev-ed.develop.my.salesforce.com/services/oauth2/token" `
+    -ContentType "application/x-www-form-urlencoded" `
+    -Body $body
+git remote add origin https://github.com/UJWAL614/SalesforcePlatformEvent.git
