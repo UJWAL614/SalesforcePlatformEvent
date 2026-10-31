@@ -1,0 +1,154 @@
+Git Configuration Setup – Future Reference
+
+This guide records the Git setup steps for the local SalesforcePratice
+project and the GitHub repository SalesforcePlatformEvent.
+
+1. Open the project folder
+
+Open PowerShell or the VS Code terminal and navigate to the project:
+
+    cd C:\Users\ujjwa\SalesforcePratice
+
+2. Initialize Git (only if the folder is not already a Git repository)
+
+    git init
+
+3. Configure your Git identity (one-time setup per computer)
+
+Replace the placeholders with your own name and email address:
+
+    git config --global user.name "Your Name"
+    git config --global user.email "your-email@example.com"
+
+Check the configured values:
+
+    git config --global --list
+
+4. Connect the local project to GitHub
+
+Add the remote only if it has not already been added:
+
+    git remote add origin https://github.com/UJWAL614/SalesforcePlatformEvent.git
+
+Check the remote:
+
+    git remote -v
+
+If origin already exists and its URL needs correction:
+
+    git remote set-url origin https://github.com/UJWAL614/SalesforcePlatformEvent.git
+
+5. Work with the develop branch
+
+Check the current branch:
+
+    git branch
+
+Switch to develop if it already exists locally:
+
+    git switch develop
+
+If it does not exist locally but exists on GitHub:
+
+    git fetch origin
+    git switch --track origin/develop
+
+To create a new local develop branch when it does not exist locally or
+remotely:
+
+    git switch -c develop
+
+6. Save and push your changes
+
+    git status
+    git add .
+    git commit -m "Describe your changes"
+    git push -u origin develop
+
+For later pushes, while on develop, you can usually use:
+
+    git push
+
+7. If push is rejected because GitHub has commits you do not have
+
+First make sure your local changes are committed or safely backed up.
+Then integrate the remote branch:
+
+    git pull --no-rebase origin develop
+
+If Git reports unrelated histories because the local and GitHub
+repositories were initialized separately, use:
+
+    git pull --no-rebase origin develop --allow-unrelated-histories
+
+If there are merge conflicts:
+
+1.  Run git status to see the conflicted files.
+2.  Open each conflicted file in VS Code.
+3.  Review both versions and keep the content you need.
+4.  Save the resolved files.
+5.  Mark them resolved and complete the merge:
+
+    git add .
+    git commit
+
+Then push:
+
+    git push -u origin develop
+
+If Git says there is no merge to commit, do not run the merge commit
+command; proceed after confirming the working tree is clean.
+
+8. Useful Git commands
+
+  ------------------------------------------------------------------------------
+  Command                                    Purpose
+  ------------------------------------------ -----------------------------------
+  git status                                 Show changed, staged, and untracked
+                                             files
+
+  git branch                                 List local branches
+
+  git branch -a                              List local and remote-tracking
+                                             branches
+
+  git remote -v                              Show connected remote repositories
+
+  git fetch origin                           Download remote updates without
+                                             merging
+
+  git pull                                   Fetch and integrate remote changes
+
+  git add .                                  Stage current folder changes
+
+  git commit -m "message"                    Create a commit
+
+  git log --oneline --graph --decorate -10   View recent commit history
+
+  git push                                   Upload committed changes
+  ------------------------------------------------------------------------------
+
+Important safety notes
+
+-   Do not use git push --force to fix an ordinary push rejection. It
+    can overwrite commits on GitHub.
+-   Before pulling or merging, commit or back up important local
+    changes.
+-   Do not commit passwords, Salesforce client secrets, API keys, access
+    tokens, or .env files.
+-   Add secrets and local-only files to .gitignore.
+-   Git identity (user.name and user.email) is separate from GitHub
+    authentication.
+-   If GitHub asks you to authenticate, use the supported browser
+    sign-in or credential manager flow. Do not put a password or token
+    directly into this document.
+
+Project details
+
+-   Local folder: C:\Users\ujjwa\SalesforcePratice
+-   GitHub repository:
+    https://github.com/UJWAL614/SalesforcePlatformEvent.git
+-   Working branch discussed: develop
+
+Update this document if the project folder, repository URL, or branch
+changes.
