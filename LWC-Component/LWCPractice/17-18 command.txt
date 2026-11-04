@@ -1,0 +1,1 @@
+sf lightning generate component --name serviceRequestParent --type lwc --output-dir force-app/main/default/lwc
