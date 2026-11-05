@@ -39,6 +39,7 @@ export default class ServiceRequestForm extends lightningElement {
         this[event.target.dataset.field] = event.detail.value;
         this.sendDataToParent();
     }
+    
       handleAccountChange(event) {
         this.accountId = event.detail.recordId;
 
