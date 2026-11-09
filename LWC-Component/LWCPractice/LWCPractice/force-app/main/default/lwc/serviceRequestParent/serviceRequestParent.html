@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Service Request Management"> 
+        <div class="slds-p-around_medium">
+            <c-service-request-form    parent-message={parentMessage} onformchange={handleFormChange}></c-service-request-form>
+        </div>
+        <template lwc:if={formData}>
+
+                <h2>Parent Component Received Data</h2>
+
+                <p>Name: {formData.requestName}</p>
+
+                <p>External ID:
+                    {formData.externalSystemId}
+                </p>
+
+                <p>Priority: {formData.priority}</p>
+
+                <p>Status: {formData.status}</p>
+
+                <lightning-button
+                    label="Save Service Request"
+                    variant="brand"
+                    onclick={handleSave}>
+                </lightning-button>
+
+            </template>
+    </lightning-card>
+</template>

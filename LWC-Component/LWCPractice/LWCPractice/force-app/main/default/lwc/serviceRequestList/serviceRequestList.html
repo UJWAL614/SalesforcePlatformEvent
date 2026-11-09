@@ -1,0 +1,16 @@
+<template>
+ <lightning-card title="Service Requests" icon-name="standard:service_appointment">
+  <div class="slds-m-around_medium">
+    <template if:true={serviceRequests.data}>
+      <template for:each={serviceRequests.data} for:item="request">
+        <p key={request.Id}>{request.Name}</p>
+          <p key={request.Id}>{request.Subject__c}</p>
+           <p key={request.Id}>{request.Status__c}</p>
+      </template>
+    </template>
+    <template if:true={serviceRequests.error}>
+      <p class="slds-text-color_error">Error loading service requests: {serviceRequests.error}</p>
+    </template>
+  </div>
+  </lightning-card>
+</template>

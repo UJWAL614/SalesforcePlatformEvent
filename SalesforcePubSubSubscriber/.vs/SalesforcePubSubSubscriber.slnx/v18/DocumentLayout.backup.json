@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ujjwa\\SalesforcePratice\\SalesforcePubSubSubscriber\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC04777-D0FC-D147-383E-B6BF7AD67C52}|SalesforcePubSubSubscriber.csproj|c:\\users\\ujjwa\\salesforcepratice\\salesforcepubsubsubscriber\\pubsubworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC04777-D0FC-D147-383E-B6BF7AD67C52}|SalesforcePubSubSubscriber.csproj|solutionrelative:pubsubworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC04777-D0FC-D147-383E-B6BF7AD67C52}|SalesforcePubSubSubscriber.csproj|c:\\users\\ujjwa\\salesforcepratice\\salesforcepubsubsubscriber\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC04777-D0FC-D147-383E-B6BF7AD67C52}|SalesforcePubSubSubscriber.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC04777-D0FC-D147-383E-B6BF7AD67C52}|SalesforcePubSubSubscriber.csproj|c:\\users\\ujjwa\\salesforcepratice\\salesforcepubsubsubscriber\\salesforceauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AC04777-D0FC-D147-383E-B6BF7AD67C52}|SalesforcePubSubSubscriber.csproj|solutionrelative:salesforceauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PubSubWorker.cs",
+              "DocumentMoniker": "C:\\Users\\ujjwa\\SalesforcePratice\\SalesforcePubSubSubscriber\\PubSubWorker.cs",
+              "RelativeDocumentMoniker": "PubSubWorker.cs",
+              "ToolTip": "C:\\Users\\ujjwa\\SalesforcePratice\\SalesforcePubSubSubscriber\\PubSubWorker.cs",
+              "RelativeToolTip": "PubSubWorker.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAADgvwwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T17:46:30.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SalesforceAuth.cs",
+              "DocumentMoniker": "C:\\Users\\ujjwa\\SalesforcePratice\\SalesforcePubSubSubscriber\\SalesforceAuth.cs",
+              "RelativeDocumentMoniker": "SalesforceAuth.cs",
+              "ToolTip": "C:\\Users\\ujjwa\\SalesforcePratice\\SalesforcePubSubSubscriber\\SalesforceAuth.cs",
+              "RelativeToolTip": "SalesforceAuth.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAcwDYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T17:12:28.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ujjwa\\SalesforcePratice\\SalesforcePubSubSubscriber\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ujjwa\\SalesforcePratice\\SalesforcePubSubSubscriber\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-31T17:11:57.709Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

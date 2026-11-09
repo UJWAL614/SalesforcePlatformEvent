@@ -1,0 +1,2 @@
+obj\Debug\net10.0\Protos/PubsubApi.cs \
+obj\Debug\net10.0\Protos/PubsubApiGrpc.cs: Protos/pubsub_api.proto

@@ -1,0 +1,60 @@
+<template>
+    <lightning-card title="Service Request Form">
+         <div class="slds-p-around_medium">
+            <p>{parentMessage}</p>
+            
+            <lightning-input
+                label="Service Request Name"
+                data-field="requestName"
+                onchange={handleInputChange}
+                required>
+            </lightning-input>
+            <lightning-input
+                label="External System ID"
+                data-field="externalSystemId"
+                onchange={handleInputChange}
+                required>
+            </lightning-input>
+             <lightning-record-picker
+                label="Account"
+                object-api-name="Account"
+                onchange={handleAccountChange}
+                required>
+            </lightning-record-picker>
+            <lightning-input
+                label="Subject"
+                data-field="subject"
+                onchange={handleInputChange}>
+            </lightning-input>
+            <lightning-combobox
+                label="Priority"
+                data-field="priority"
+                options={priorityOptions}
+                onchange={handlePicklistChange}>
+            </lightning-combobox>
+            <lightning-combobox
+                label="Status"
+                data-field="status"
+                options={statusOptions}
+                onchange={handlePicklistChange}>
+            </lightning-combobox>
+            <lightning-textarea
+                label="Description"
+                data-field="description"
+                onchange={handleInputChange}>
+            </lightning-textarea>
+
+            <lightning-input
+                type="email"
+                label="Email Address"
+                data-field="emailAddress"
+                onchange={handleInputChange}>
+            </lightning-input>
+              <lightning-button
+                label="Send to Parent"
+                onclick={handleSubmit}>
+            </lightning-button>
+
+         </div>
+    </lightning-card>
+</template>

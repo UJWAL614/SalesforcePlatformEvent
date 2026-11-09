@@ -1,0 +1,31 @@
+sf project generate --name account-file-upload --template standard
+cd account-file-upload
+
+# Opens browser for login (use --instance-url https://test.salesforce.com for sandbox)
+sf org login web --alias myOrg --set-default
+
+sf lightning generate component --type lwc --name accountFileUploader --output-dir force-app/main/default/lwc
+
+sf apex generate class --name AccountFileController --output-dir force-app/main/default/classes
+sf apex generate class --name AccountFileControllerTest --output-dir force-app/main/default/classes
+
+
+sf project deploy start --source-dir force-app --target-org myOrg
+
+local run
+
+sf plugins install @salesforce/lwc-dev-server --retried 2025
+
+sf plugins install @salesforce/plugin-lightning-dev
+Salesforce@2026
+salesforcelearning056@gmail.com
+
+sf project deploy start --source-dir force-app/main/default/messageChannels --target-org mySalesforceOrg
+
+Get-ChildItem force-app\main\default\messageChannels
+
+Get-Content force-app\main\default\messageChannels\ServiceRequestChannel.messageChannel-meta.xml
+
+sf project deploy preview --target-org mySalesforceOrg --source-dir force-app\main\default\messageChannels
+
+New-Item -ItemType Directory -Force -Path "force-app\main\default\messageChannels"

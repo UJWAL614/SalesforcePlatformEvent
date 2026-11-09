@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Service Request Publisher" icon-name="standard:service_appointment">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Service Request Title"
+             value={serviceRequestTitle} 
+            onchange={handleTitleChange}>
+        </lightning-input>
+        <lightning-input label="Service Request Id"
+            value={serviceRequestId}
+            onchange={handleIdChange}>
+        </lightning-input>
+            <lightning-textarea label="Service Request Description" 
+            value={serviceRequestDescription} 
+            onchange={handleDescriptionChange}>
+            </lightning-textarea>
+            <lightning-button variant="brand" 
+            label="Submit Service Request" 
+            onclick={handleSubmit}>
+        </lightning-button>
+        </div>
+        </lightning-card>   
+</template>
