@@ -1,0 +1,87 @@
+<template>
+    <lightning-card title="Day 21 - Service Request Manager">
+
+        <div class="slds-p-around_medium">
+
+            <h2 class="slds-text-heading_medium">
+                Create Service Request
+            </h2>
+
+            <lightning-input
+                label="Service Request Name"
+                value={name}
+                onchange={handleNameChange}
+                required>
+            </lightning-input>
+
+            <lightning-input
+                label="External System ID"
+                value={externalId}
+                onchange={handleExternalIdChange}
+                required>
+            </lightning-input>
+
+            <lightning-input
+                label="Account Record ID"
+                value={accountId}
+                onchange={handleAccountChange}
+                required>
+            </lightning-input>
+
+            <lightning-input
+                label="Subject"
+                value={subject}
+                onchange={handleSubjectChange}>
+            </lightning-input>
+
+            <lightning-combobox
+                label="Priority"
+                value={priority}
+                options={priorityOptions}
+                onchange={handlePriorityChange}>
+            </lightning-combobox>
+
+            <lightning-combobox
+                label="Status"
+                value={status}
+                options={statusOptions}
+                onchange={handleStatusChange}>
+            </lightning-combobox>
+
+            <lightning-button
+                label="Save Service Request"
+                variant="brand"
+                onclick={handleSave}
+                class="slds-m-top_medium"
+                disabled={isSaving}>
+            </lightning-button>
+
+            <lightning-button
+                label="Refresh List"
+                onclick={handleRefresh}
+                class="slds-m-top_medium slds-m-left_small">
+            </lightning-button>
+
+            <div class="slds-m-top_large">
+                <h2 class="slds-text-heading_medium">
+                    Recent Service Requests
+                </h2>
+
+                <template lwc:if={serviceRequests}>
+                    <lightning-datatable
+                        key-field="Id"
+                        data={serviceRequests}
+                        columns={columns}>
+                    </lightning-datatable>
+                </template>
+
+                <template lwc:if={errorMessage}>
+                    <p class="slds-text-color_error">
+                        {errorMessage}
+                    </p>
+                </template>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>
