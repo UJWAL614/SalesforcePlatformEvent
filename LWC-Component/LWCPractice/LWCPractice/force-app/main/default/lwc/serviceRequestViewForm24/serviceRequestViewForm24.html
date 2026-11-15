@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Service Request Details" icon-name="standard:service_appointment">
+        <div class="slds-p-horizontal_small">
+            <lightning-record-view-form
+                record-id={recordId}
+                object-api-name="Service_Request__c"
+                layout-type="Full"
+                mode="view">
+            </lightning-record-view-form>
+             <lightning-output-field
+                    field-name="Name">
+                </lightning-output-field>
+
+                <lightning-output-field
+                    field-name="External_System_ID__c">
+                </lightning-output-field>
+
+                <lightning-output-field
+                    field-name="Account__c">
+                </lightning-output-field>
+
+                <lightning-output-field
+                    field-name="Subject__c">
+                </lightning-output-field>
+
+                <lightning-output-field
+                    field-name="Priority__c">
+                </lightning-output-field>
+
+                <lightning-output-field
+                    field-name="Status__c">
+                </lightning-output-field>
+        </div>
+    </lightning-card>
+    
+</template>

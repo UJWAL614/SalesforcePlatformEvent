@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Parent Component 22">
+        <div class="slds-p-around_medium">
+            <p>This is the Service Request Day 22 Parent component.</p>
+            <lightning-input 
+            label="Service Request Name" 
+            value={requestName} 
+            onchange={handleRequestNameChange}>
+           </lightning-input>
+            <lightning-input label="Service Request Priority"
+             value={requestPriority}
+              onchange={handleRequestPriorityChange}>
+            </lightning-input>
+        </div>
+    </lightning-card>
+ 
+    <c-service-request-child22 
+        request-name={requestName} 
+        request-priority={requestPriority}>
+    </c-service-request-child22>
+        
+   
+</template>

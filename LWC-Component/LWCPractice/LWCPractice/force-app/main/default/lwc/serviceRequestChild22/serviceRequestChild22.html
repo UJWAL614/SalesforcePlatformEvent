@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Service Request Day 22 Child test">
+        <div class="slds-p-around_medium">
+            <p>This is the Service Request Day 22 Child component.</p>
+            <p>Service Request Name: {requestDetails.name}</p>
+            <p>Request Priority: {requestDetails.priority}</p>
+            <p>Message: {priorityMessage}</p>
+
+            <lightning-button
+                class="slds-m-top_small"
+                variant="brand"
+                label="Change Priority"
+                onclick={changedRequestDetails}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>

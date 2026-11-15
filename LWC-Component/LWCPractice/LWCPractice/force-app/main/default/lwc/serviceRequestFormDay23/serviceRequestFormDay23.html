@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Service Request Form - Day 23-No Apex data save" icon-name="standard:service_appointment">
+         <div class="slds-p-around_medium">
+            <lightning-record-form
+                record-id={recordId}
+                object-api-name="Service_Request__c"
+                layout-type="Full"
+                mode="edit"
+                onsuccess={handleSuccess}
+                onerror={handleError}>
+            </lightning-record-form>
+           
+            </div>
+    </lightning-card>   
+</template>
