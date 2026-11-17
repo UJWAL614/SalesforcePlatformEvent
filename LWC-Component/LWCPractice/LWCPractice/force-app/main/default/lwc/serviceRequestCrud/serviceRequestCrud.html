@@ -1,0 +1,88 @@
+<template>
+
+    <lightning-card title="Service Request CRUD using LDS">
+
+        <div class="slds-p-around_medium">
+
+            <template lwc:if={loadError}>
+                <div class="slds-text-color_error slds-m-bottom_medium">
+                    {loadError}
+                </div>
+            </template>
+
+            <lightning-input
+                label="Service Request Name"
+                name="name"
+                value={name}
+                onchange={handleInputChange}
+                required>
+            </lightning-input>
+
+            <lightning-input
+                label="External System ID"
+                name="externalSystemId"
+                value={externalSystemId}
+                maxlength="20"
+                onchange={handleInputChange}
+                required>
+            </lightning-input>
+
+            <lightning-input
+                label="Subject"
+                name="subject"
+                value={subject}
+                onchange={handleInputChange}>
+            </lightning-input>
+
+            <lightning-record-picker
+                label="Account"
+                placeholder="Search Accounts"
+                object-api-name="Account"
+                value={accountId}
+                onchange={handleAccountChange}>
+            </lightning-record-picker>
+
+            <lightning-combobox
+                label="Priority"
+                name="priority"
+                value={priority}
+                options={priorityOptions}
+                onchange={handleInputChange}>
+            </lightning-combobox>
+
+            <lightning-combobox
+                label="Status"
+                name="status"
+                value={status}
+                options={statusOptions}
+                onchange={handleInputChange}>
+            </lightning-combobox>
+
+            <div class="slds-m-top_medium">
+
+                <lightning-button
+                    label={saveButtonLabel}
+                    variant="brand"
+                    onclick={handleSave}
+                    disabled={isSaving}>
+                </lightning-button>
+
+                <template lwc:if={canDelete}>
+
+                    <lightning-button
+                        label="Delete"
+                        variant="destructive"
+                        onclick={handleDelete}
+                        disabled={isSaving}
+                        class="slds-m-left_small">
+                    </lightning-button>
+
+                </template>
+
+            </div>
+
+        </div>
+
+    </lightning-card>
+
+</template>

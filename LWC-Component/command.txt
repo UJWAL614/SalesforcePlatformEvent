@@ -29,3 +29,17 @@ Get-Content force-app\main\default\messageChannels\ServiceRequestChannel.message
 sf project deploy preview --target-org mySalesforceOrg --source-dir force-app\main\default\messageChannels
 
 New-Item -ItemType Directory -Force -Path "force-app\main\default\messageChannels"
+
+@'
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Service Request Channel</masterLabel>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <fieldName>recordId</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>status</fieldName>
+    </lightningMessageFields>
+</LightningMessageChannel>
+'@ | Set-Content -Encoding UTF8 "force-app\main\default\messageChannels\ServiceRequestChannel.messageChannel-meta.xml"

@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Service Request Navigation">
+        <div class="slds-p-around_medium">
+
+            <lightning-input
+                label="Service Request Record ID"
+                value={recordId}
+                onchange={handleIdChange}>
+            </lightning-input>
+
+            <lightning-button
+                label="View Record"
+                variant="brand"
+                onclick={handleViewRecord}>
+            </lightning-button>
+
+            <lightning-button
+                label="Edit Record"
+                class="slds-m-left_small"
+                onclick={handleEditRecord}>
+            </lightning-button>
+
+        </div>
+    </lightning-card>
+</template>
