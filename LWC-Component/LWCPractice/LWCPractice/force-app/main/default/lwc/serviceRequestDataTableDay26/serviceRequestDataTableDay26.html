@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Service Request DataTable">
+        <div class="slds-p-around_medium">
+            <lightning-input
+                type="search"
+                label="Search Service Request Details"
+                placeholder="Search by Name or Subject"
+                onchange={handleSearch}>
+            </lightning-input>
+
+            <lightning-datatable
+                key-field="Id"
+                data={visibleRecords}
+                columns={columns}
+                sorted-by={sortedBy}
+                sorted-direction={sortDirection}
+                onsort={handleSort}>
+                <!-- hide-checkbox-column -->
+                
+            </lightning-datatable>
+
+            <div class="slds-m-top_small slds-grid slds-grid_align-spread">
+                <lightning-button label="Previous" onclick={handlePrevious} disabled={isPreviousDisabled}></lightning-button>
+                <span>Page {currentPage} of {totalPages}</span>
+                <lightning-button label="Next" onclick={handleNext} disabled={isNextDisabled}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
